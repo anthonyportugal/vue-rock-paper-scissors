@@ -1,6 +1,17 @@
-# rock-paper-scissors
+<br />
+<div align="center">
 
-This template should help get you started developing with Vue 3 in Vite.
+  <h2 align="center">Vue Rock Paper Scissors</h2>
+
+  <p align="center">
+    A simple rock, paper and scissors game made with VueJS
+    <br />
+		🚧 <i>Work in progress</i> 🚧
+    <br />
+  </p>
+</div>
+
+<hr/>
 
 ## Recommended IDE Setup
 
@@ -43,4 +54,10 @@ pnpm build
 
 ```sh
 pnpm lint
+```
+
+### Format with [Prettier](https://prettier.io/)
+
+```sh
+pnpm format
 ```
