@@ -3,10 +3,21 @@
 	"include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
 	"compilerOptions": {
 		"baseUrl": ".",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"strict": true,
 		"paths": {
-			"@/*": ["./src/*"]
-		}
+			"@/*": ["./src/*"],
+			"layouts/*": ["./src/components/layouts/*"],
+			"pages/*": ["./src/components/pages/*"],
+			"templates/*": ["./src/components/templates/*"],
+			"organisms/*": ["./src/components/organisms/*"],
+			"molecules/*": ["./src/components/molecules/*"],
+			"atoms/*": ["./src/components/atoms/*"]
+		},
+		"target": "ES6"
 	},
+	"exclude": ["/dist", "node_modules"],
 
 	"references": [
 		{
