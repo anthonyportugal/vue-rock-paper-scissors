@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [],
+	content: ['./index.html', './src/**/*.{js,ts,vue}'],
 	theme: {
 		extend: {}
 	},
-	plugins: []
+	plugins: [require('@catppuccin/tailwindcss')]
 };
