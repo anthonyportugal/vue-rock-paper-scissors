@@ -4,26 +4,28 @@
 		<h1 class="text-center uppercase sm:text-4xl md:text-7xl">
 			Rock, Paper, Scissors game
 		</h1>
-		<div
+		<section
 			v-if="resultMessage"
-			class="flex-col flex-wrap items-center justify-center gap-4">
-			<h3 class="text-2xl">{{ resultMessage }}</h3>
-			<button class="bg-rosewater p-4" @click="playAgain">Play again</button>
+			class="flex flex-col flex-nowrap items-center justify-center gap-4">
+			<h3 class="text-3xl">{{ resultMessage }}</h3>
+			<button class="rounded-2xl bg-rosewater p-4 text-lg" @click="playAgain">
+				Play again
+			</button>
 			<div class="flex gap-3">
 				<ElementCard
 					v-for="element in picks"
 					:key="element.value"
 					:element="element" />
 			</div>
-		</div>
-		<div v-else class="flex flex-wrap items-center justify-center gap-5">
+		</section>
+		<section v-else class="flex flex-wrap items-center justify-center gap-5">
 			<ElementCard
 				v-for="element in ELEMENTS"
 				:key="element.value"
 				:element="element"
 				clickable
 				@click="onElementCardClick" />
-		</div>
+		</section>
 	</div>
 </template>
 
@@ -35,9 +37,9 @@
 	import { reactive, ref } from 'vue';
 
 	const resultMessages: Record<Result, string> = {
-		[Result.WIN]: 'You win',
-		[Result.LOSE]: 'You lose',
-		[Result.DRAW]: 'Draw'
+		[Result.WIN]: 'You win 😀',
+		[Result.LOSE]: 'You lose 😢',
+		[Result.DRAW]: 'Draw 😐'
 	};
 
 	const picks: ElementItem[] = reactive([]);
